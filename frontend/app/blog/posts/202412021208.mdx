@@ -1,0 +1,176 @@
+---
+title: '[12/2 - 12/8] GitHub Weekly Digest'
+publishedAt: '2024-12-08'
+---
+## 📌 [LadybirdBrowser/ladybird](https://github.com/LadybirdBrowser/ladybird)
+<Callout>
+    Description: Truly independent web browser\
+    🌐 C++｜⭐️ 26,042 | 3630 stars this week
+</Callout>
+    #### 簡介
+
+Ladybird 是一款基於 Web 標準的全新引擎開發的獨立網頁瀏覽器，目前處於預覽階段 (pre-alpha)，僅適用於開發者使用。它目標是打造一個完整且可用的現代化網頁瀏覽器。
+
+
+#### 主要功能
+
+* 使用多程式架構 (multi-process architecture)，包含主 UI 程式、多個 WebContent 渲染程式、影象解碼程式和請求伺服器程式。
+* 影象解碼和網路連線在獨立程式中進行，以增強安全性，抵禦惡意內容。
+* 每個分頁都有其獨立的渲染程式，與系統其他部分隔離 (sandboxed)。
+* 許多核心庫元件繼承自 SerenityOS：
+    * LibWeb: 網頁渲染引擎
+    * LibJS: JavaScript 引擎
+    * LibWasm: WebAssembly 實作
+    * LibCrypto/LibTLS: 加密原語和傳輸層安全性
+    * LibHTTP: HTTP/1.1 客戶端
+    * LibGfx: 二維圖形庫、影象解碼和渲染
+    * LibUnicode: Unicode 和地區設定支援
+    * LibMedia: 音訊和視訊播放
+    * LibCore: 事件迴圈、作業系統抽象層
+    * LibIPC: 程式間通訊
+
+
+#### 如何使用
+
+*  建置與執行：請參考建置說明 (build instructions) 檔案。
+*  支援平臺：Linux、macOS、Windows (需使用 WSL2) 和許多其他類 Unix 系統 (*Nixes)。
+*  檔案閱讀：程式碼相關檔案位於 documentation 資料夾。
+*  參與社群：加入 Discord 伺服器參與社群討論。
+## 📌 [myhhub/stock](https://github.com/myhhub/stock)
+<Callout>
+    Description: stock股票.获取股票数据,计算股票指标,识别股票形态,综合选股,选股策略,股票验证回测,股票自动交易,支持PC及移动设备。\
+    🌐 Python｜⭐️ 5,637 | 3334 stars this week
+</Callout>
+    #### 簡介
+
+InStock 股票系統是一個強大的量化投資工具，旨在抓取每日股票和 ETF 的關鍵資料，計算各種技術指標，識別 K 線形態，並提供多種選股策略及回測功能。它支援自動交易 (需自行承擔風險)，並支援 PC、平板和手機等多種裝置，同時提供 Docker 映象簡化安裝流程。  系統高效且功能豐富，是量化投資者的理想幫手。
+
+
+#### 主要功能
+
+* **綜合選股:**  基於股票範圍 (市場、行業、地區等)、基本面、技術面 (MACD, KDJ, BOLL 等 30 多種指標)、訊息面、人氣指標和行情資料等 200 多個欄目，自由組合選股條件。
+* **股票每日資料抓取:** 收集每日股票資料、資金流向、分紅配送、龍虎榜、大宗交易、基本面資料、行業和概念資金流向，以及 ETF 資料。
+* **股票指標計算:** 使用 talib 和 pandas 庫高效準確地計算多種技術指標 (MACD, KDJ, RSI, BOLL 等)。
+* **買賣點判斷:** 基於 KDJ、RSI、CCI、CR 和 WR 等指標，判斷股票可能的買入和賣出點位。
+* **K 線形態識別:** 精準識別 61 種 K 線形態，並支援自選形態識別，提供買賣訊號。
+* **策略選股:** 內建多種選股策略 (放量上漲、停機坪、回踩年線等)，並提供策略模板方便自定義。
+* **選股驗證:** 對選出的股票進行回測，驗證策略的有效性。
+* **自動交易:** 支援自動交易，包含打新股策略 (需自行承擔風險)，並提供交易日誌。
+* **股票關注:** 支援關注股票，並在各個模組中置頂或標紅顯示。
+* **批次處理:** 支援批次處理指標計算、策略選股和回測等任務，並能指定時間範圍或單個日期執行。
+* **資料庫儲存:** 使用資料庫儲存歷史資料，方便資料分析和挖掘。
+* **Web 介面:** 採用 Web 設計，提供視覺化展示結果。
+
+
+#### 如何使用
+
+* **安裝 Python 3.11 及相關套件:**  參考 README 中的步驟安裝 Python、MySQL、必要的 Python 庫 (使用 `pip install -r requirements.txt`)  和 TA-Lib (兩種安裝方法皆有提供)。
+* **安裝 MySQL 資料庫:** 安裝並配置 MySQL 資料庫，並修改 `database.py` 中的資料庫連線引數。
+* **(選項) 安裝 Navicat:** 使用 Navicat 方便管理資料庫。
+* **(選項) 安裝自動交易相關軟體:** 安裝交易軟體 (例如同花順) 和 tesseract OCR (用於自動識別驗證碼)，並設定交易引數。
+* **執行資料抓取及處理:** 執行 `run_job.bat` 抓取並處理每日資料。
+* **啟動 Web 服務:** 執行 `run_web.bat` 啟動 Web 服務，並透過瀏覽器訪問系統。
+* **(選項) 啟動交易服務:** 執行 `run_trade.bat` 啟動自動交易服務 (需自行承擔風險)。
+* **Docker 安裝:**  README 提供使用 Docker 安裝的步驟，包含資料庫映象的安裝。  使用 Docker 可簡化安裝流程。  執行對應的 Docker 命令。
+## 📌 [lobehub/lobe-chat](https://github.com/lobehub/lobe-chat)
+<Callout>
+    Description: 🤯 Lobe Chat - an open-source, modern-design AI chat framework. Supports Multi AI Providers( OpenAI / Claude 3 / Gemini / Ollama / Qwen / DeepSeek), Knowledge Base (file upload / knowledge management / RAG ), Multi-Modals (Vision/TTS/Plugins/Artifacts). One-click FREE deployment of your private ChatGPT/ Claude application.\
+    🌐 TypeScript｜⭐️ 48,340 | 3134 stars this week
+</Callout>
+    #### 簡介
+
+LobeChat 是一個開源的、現代化設計的 ChatGPT/大型語言模型 (LLM) 使用者介面/框架。它支援語音合成 (TTS)、多模態和可擴充套件的 (函式呼叫) 外掛系統。只需點選一下，即可免費部署您自己的私有 OpenAI ChatGPT/Claude/Gemini/Groq/Ollama 聊天應用程式。LobeChat 目前仍在積極開發中，歡迎提供任何遇到的問題回饋。
+
+
+#### 主要功能
+
+* **多模型服務供應商支援:** 支援 OpenAI、Anthropic (Claude)、Google AI (Gemini)、Groq、OpenRouter、01.AI、Together.ai、ChatGLM、Moonshot AI、Minimax、DeepSeek、Qwen、Novita AI 等多種模型服務供應商。
+* **本地大型語言模型 (LLM) 支援:**  支援基於 Ollama 的本地模型，讓使用者能靈活使用自己的或第三方模型。
+* **模型視覺辨識:** 支援 OpenAI 的 gpt-4-vision 模型，具備視覺辨識能力，可處理圖片訊息。
+* **TTS & STT 語音對話:** 支援文字轉語音 (TTS) 和語音轉文字 (STT) 技術，實現語音互動。
+* **文字轉圖片生成:** 支援最新的文字轉圖片生成技術，例如 DALL-E 3、MidJourney 和 Pollinations。
+* **外掛系統 (函式呼叫):**  透過外掛擴充套件核心功能，例如網路搜尋、檔案搜尋、與第三方服務互動等。
+* **代理市場 (GPTs):** 提供代理市場，使用者可以發現和分享各種設計精良的代理程式。
+* **支援本地/遠端資料庫:** 支援本地和伺服器端資料庫 (PostgreSQL)，並使用 CRDT 技術實現多裝置同步 (實驗性功能)。
+* **支援多使用者管理:** 整合 next-auth 和 Clerk 提供多種使用者驗證和管理方案。
+* **漸進式網頁應用程式 (PWA):**  支援 PWA 技術，提供接近原生應用的使用者體驗，並適應桌面和行動裝置。
+* **檔案上傳/知識庫:** 支援檔案上傳和知識庫功能，方便使用者管理和搜尋檔案。
+
+
+#### 如何使用
+
+* **無需安裝或註冊:** 訪問官方網站即可體驗。
+* **一鍵部署:** 使用 Vercel、Zeabur、Sealos、Alibaba Cloud 或 Docker 映像檔快速部署。
+* **環境變數設定:** 使用環境變數設定 API 金鑰、代理伺服器等引數 (例如 `OPENAI_API_KEY`, `ACCESS_CODE`, `OPENAI_PROXY_URL`)。
+* **Docker 部署:** 使用 Docker 映像檔部署到私人裝置。  指令範例：`docker run -d -p 3210:3210 -e OPENAI_API_KEY=sk-xxxx -e ACCESS_CODE=lobe66 --name lobe-chat lobehub/lobe-chat`
+* **PWA 安裝:** 在 Chrome 或 Edge 瀏覽器中，點選網址列右上角的安裝圖示，將 LobeChat 作為桌面應用程式安裝。
+* **自訂主題:**  可自訂主題顏色和選擇聊天泡泡模式或檔案模式。
+## 📌 [keephq/keep](https://github.com/keephq/keep)
+<Callout>
+    Description: The open-source alert management and AIOps platform\
+    🌐 Python｜⭐️ 8,233 | 2487 stars this week
+</Callout>
+    #### 簡介
+
+Keep 是一個開源的警示管理和 AIOps 平臺，提供單一視窗來集中管理、去重複、豐富化、過濾和關聯警示，並支援雙向整合、工作流程和儀錶板。它能有效地整合多種監控工具、資料庫和通訊平臺，並透過 AI 驅動的關聯和摘要功能，提升警示管理效率。  Keep 也支援自定義工作流程，讓使用者能自動化警示處理流程。
+
+
+#### 主要功能
+
+* 單一視窗 (Single pane of glass)：提供最佳化的自定義使用者介面，集中顯示所有警示和事件。
+* 警示多功能工具 (Swiss Army Knife for alerts)：支援警示去重複、關聯、過濾和豐富化。
+* 深度整合 (Deep integrations)：與多種監控工具進行雙向同步，並支援自定義工作流程。
+* 自動化 (Automation)：利用 GitHub Actions 自動化監控工具的相關流程。
+* AIOps 2.0：AI 驅動的警示關聯和摘要功能。
+* 支援豐富的整合：包含多種監控工具 (例如 AppDynamics, Datadog, Prometheus 等)、資料庫 (例如 BigQuery, PostgreSQL 等)、通訊平臺 (例如 Slack, Teams 等)、事件管理工具 (例如 PagerDuty, Jira 等) 以及容器編排平臺等。
+* 自定義工作流程 (Workflows)：透過 YAML 檔案定義觸發條件、步驟和動作，自動化警示處理流程。
+
+
+#### 如何使用
+
+* **建立工作流程 (Workflows):** 使用者可透過 YAML 檔案定義工作流程，包含觸發器 (Triggers)、步驟 (Steps) 和動作 (Actions)。觸發器定義工作流程的啟動條件 (例如警示、事件、排程或手動)，步驟用於讀取或擷取資料 (例如豐富化、上下文資訊)，動作則執行操作 (例如更新工單、傳送通知、重新啟動伺服器)。
+* **定義觸發器 (Triggers):**  指定觸發工作流程的條件，例如警示來源、嚴重性、服務名稱等，可以使用 filter 篩選條件。  範例中，`type: alert` 代表以警示作為觸發條件，`filters` 則設定篩選條件。
+* **設定動作 (Actions):** 定義工作流程執行的動作，例如傳送 Slack 訊息、建立 Jira 工單等。  範例中，使用 `if` 條件判斷，根據警示服務的不同，執行不同的動作。
+* **使用提供者 (Provider):**  工作流程中使用的各種服務 (例如 Slack, Jira) 需要先設定好 provider。
+* **自定義訊息和欄位:**  可以透過  `{{ alert }}` 等變數，在訊息和欄位中加入警示的相關資訊。
+* **參考範例工作流程:** 檔案中提供範例工作流程，說明如何建立 Jira 工單。
+* **參考檔案:**  完整檔案提供更詳細的使用說明和更多進階功能。
+## 📌 [aidenybai/react-scan](https://github.com/aidenybai/react-scan)
+<Callout>
+    Description: Scan for React performance issues and eliminate slow renders in your app\
+    🌐 TypeScript｜⭐️ 9,336 | 2414 stars this week
+</Callout>
+    #### 簡介
+
+React Scan 是一款自動偵測 React 應用程式效能問題的工具。它解決了現有工具例如 `<Profiler />` 需要大量手動修改、Why Did You Render? 缺乏簡單的視覺提示，以及 React Devtools 沒有簡單、可移植和程式化的 API 等問題。React Scan 不需要任何程式碼變更，只需匯入即可；它能精準標示需要最佳化的元件；並支援多種使用方式，例如 script 標籤、npm 和 CLI 等。
+
+
+#### 主要功能
+
+* 自動偵測 React 應用程式中的效能問題。
+* 不需要程式碼變更，即可直接使用。
+* 精確標示需要最佳化的元件。
+* 提供多種使用方式：script 標籤、npm 套件和 CLI 命令列介面。
+* 提供程式化 API (透過 npm 安裝)。
+* 可自訂選項，例如啟用/停用掃描、包含子元件、播放聲音、記錄渲染資訊、顯示工具列、渲染次數閾值等等。
+* 提供 `scan`、`useScan`、`withScan`、`getReport`、`setOptions`、`getOptions`、`onRender` 和 `getRenderInfo` 等 API 函式。
+* 可監控生產環境中的問題 (需使用 React Scan Monitoring)。
+
+
+#### 如何使用
+
+* **CLI:** 使用 `npx react-scan@latest [網址]`  掃描網頁，例如 `npx react-scan@latest http://localhost:3000`。
+* **script 標籤:**  將 `<script src="https://unpkg.com/react-scan/dist/auto.global.js"></script>` 加入至專案的 `_document.tsx` (Next.js pages)、`app/layout.tsx` (Next.js app) 或 `index.html` (Vite/Create React App) 中，於所有 scripts 之前匯入。
+* **npm 套件:**  使用 `npm install react-scan` 安裝，並在應用程式中匯入 `import { scan } from 'react-scan';` (需在匯入 `React` 之前)，然後使用 `scan(options)` 函式啟動掃描，例如：
+
+```javascript
+import { scan } from 'react-scan';
+import React from 'react';
+
+if (typeof window !== 'undefined') {
+  scan({ enabled: true, log: true });
+}
+```
+
+*  參考檔案提供了更多關於 API 使用方法及選項設定的細節。
+* 可安裝 Chrome 擴充程式 (檔案另述)。
