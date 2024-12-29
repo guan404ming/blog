@@ -1,0 +1,173 @@
+---
+title: '[12/23 - 12/29] GitHub Weekly Digest'
+publishedAt: '2024-12-29'
+---
+## 📌 [nicbarker/clay](https://github.com/nicbarker/clay)
+<Callout>
+    Description: High performance UI layout library in C.\
+    🌐 C｜⭐️ 8,463 | 5115 stars this week
+</Callout>
+    #### 簡介
+
+Clay (C Layout 的縮寫) 是一個高效能的二維 UI 佈局庫，其主要特點是微秒級的佈局效能和靈活的佈局模型，支援複雜且響應式的佈局，包含文字換行、滾動容器和縱橫比縮放。它僅包含一個約 2000 行程式碼的 clay.h 檔案，零依賴 (不依賴標準庫)，並支援 WebAssembly 編譯，可以編譯成 15kb 的未壓縮 .wasm 檔案在瀏覽器中使用。Clay 使用靜態記憶體配置，沒有 malloc/free 操作，記憶體開銷低 (例如，8192 個佈局元素約佔用 3.5MB)。它採用類似 React 的巢狀宣告式語法，並且與渲染器無關，輸出一個排序後的渲染原語列表，可以輕鬆地組合到任何 3D 引擎中，甚至可以編譯成 HTML。
+
+
+#### 主要功能
+
+* 微秒級佈局效能 (Microsecond layout performance)
+* 類似 Flex-box 的佈局模型，支援複雜且響應式的佈局，包含文字換行、滾動容器和縱橫比縮放 (Flex-box like layout model for complex, responsive layouts including text wrapping, scrolling containers and aspect ratio scaling)
+* 單一 clay.h 檔案，程式碼量約 2000 行，零依賴 (Single ~2k LOC clay.h file with zero dependencies)
+* 支援 WebAssembly (Wasm support)
+* 基於靜態記憶體配置，沒有 malloc/free 操作，記憶體開銷低 (Static arena based memory use with no malloc / free, and low total memory overhead)
+* 類似 React 的巢狀宣告式語法 (React-like nested declarative syntax)
+* 與渲染器無關 (Renderer agnostic)
+
+
+#### 如何使用
+
+* 在一個檔案中定義 CLAY_IMPLEMENTATION，然後包含 clay.h 檔案。
+* 使用 Clay_MinMemorySize() 函式獲取所需的靜態記憶體大小，並使用 Clay_CreateArenaWithCapacityAndMemory() 函式建立記憶體區域，最後使用 Clay_Initialize() 函式初始化。
+* 使用 Clay_SetMeasureTextFunction() 函式設定 MeasureText() 函式指標，以便 Clay 測量和換行文字。
+* 呼叫 Clay_BeginLayout() 函式開始佈局，使用提供的巨集宣告佈局，並呼叫 Clay_EndLayout() 函式結束佈局，處理產生的 Clay_RenderCommandArray。
+* 選擇性的函式呼叫：Clay_SetLayoutDimensions() (更新佈局尺寸)、Clay_SetPointerState() (更新指標狀態)、Clay_UpdateScrollContainers() (更新滾動容器)。
+* 使用提供的 Element Macros (CLAY(), CLAY_ID(), CLAY_LAYOUT(), CLAY_RECTANGLE(), CLAY_TEXT(), CLAY_IMAGE(), CLAY_SCROLL(), CLAY_BORDER(), CLAY_FLOATING()) 建立 UI 元素。  這些巨集允許巢狀使用，並支援自定義佈局、樣式和功能。
+## 📌 [Genesis-Embodied-AI/Genesis](https://github.com/Genesis-Embodied-AI/Genesis)
+<Callout>
+    Description: A generative world for general-purpose robotics & embodied AI learning.\
+    🌐 Python｜⭐️ 20,207 | 4239 stars this week
+</Callout>
+    #### 簡介
+
+* Genesis 是一個為通用機器人/具身 AI/物理 AI 應用程式設計的物理平臺。
+* 它結合了通用物理引擎、輕量級且快速的機器人模擬平臺、強大的逼真渲染系統以及生成資料引擎。
+* Genesis 旨在降低使用物理模擬的門檻，統一不同的物理求解器，並自動化資料生成。
+* 支援多種平臺 (Linux, macOS, Windows) 和計算後端 (CPU, Nvidia/AMD GPUs, Apple Metal)。
+* 擁有高達 4300 萬 FPS 的模擬速度 (使用單個 RTX 4090 模擬 Franka 機器手臂)。
+* 目標是讓機器人研究更容易上手，並以最高的保真度重建物理世界。
+
+
+#### 主要功能
+
+* **高速運算:**  單個 RTX 4090 上模擬 Franka 機器手臂可達 4300 萬 FPS 以上。
+* **跨平臺支援:** 支援 Linux、macOS、Windows 和多種計算後端 (CPU, Nvidia/AMD GPUs, Apple Metal)。
+* **整合多種物理求解器:** 包含剛體、MPM、SPH、FEM、PBD、穩定流體等。
+* **廣泛的材料模型:** 支援剛體、液體、氣體、可變形物體、薄殼物體和顆粒材料的模擬和耦合。
+* **與各種機器人相容:** 支援機械手臂、腿式機器人、無人機、軟性機器人，並支援載入 MJCF (.xml)、URDF、.obj、.glb、.ply、.stl 等格式。
+* **逼真的渲染:**  原生光線追蹤渲染。
+* **可微分:** MPM 求解器和工具求解器目前支援可微分，其他求解器計劃在未來版本中加入此功能。
+* **基於物理的觸覺模擬:** 可微分的觸覺感測器模擬即將推出 (預計在 0.3.0 版)。
+* **使用者友善:** 簡單易用的安裝和 API。
+
+
+#### 如何使用
+
+* **快速安裝:** 透過 PyPI 安裝 `pip install genesis-world` (需要 Python >=3.9)，並需安裝 PyTorch。
+* **從 GitHub 安裝最新版本:** `git clone https://github.com/Genesis-Embodied-AI/Genesis.git` 後，`cd Genesis` 並執行 `pip install -e .`。
+* **使用 Docker:**  建置 Docker 映像檔 `docker build -t genesis -f docker/Dockerfile docker`，並使用 `docker run` 命令執行，需設定 GPU 訪問和 X11 連線。  相關引數請參考檔案。
+* **檔案:** 提供英文和中文的完整檔案，包含詳細的安裝步驟、教程和 API 參考。
+* **貢獻:**  歡迎透過 Pull requests、GitHub Issues 和建議來貢獻。  詳細資訊請參考貢獻指南。
+* **支援:**  可透過 GitHub Issues 報告錯誤或請求功能，並參與 GitHub Discussions。
+## 📌 [donnemartin/system-design-primer](https://github.com/donnemartin/system-design-primer)
+<Callout>
+    Description: Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.\
+    🌐 Python｜⭐️ 283,159 | 3032 stars this week
+</Callout>
+    #### 簡介
+
+這個程式碼庫是一個有組織的資源集合，旨在幫助學習如何設計大規模系統，並為系統設計面試做準備。它包含各種系統設計主題的摘要、優缺點比較、深入資源連結、Anki  flashcards、以及常見系統設計面試題目及其解決方案。資源涵蓋了可擴充套件性、可用性、一致性、資料庫、快取、非同步處理、通訊協定等重要面向。  本程式庫持續更新，並歡迎社群貢獻。
+
+
+#### 主要功能
+
+* 提供組織化的系統設計學習資源。
+* 收錄常見系統設計面試題目及其解決方案（包含討論、程式碼和圖表）。
+* 提供物件導向設計面試題目及其解決方案。
+* 包含 Anki flashcards，幫助記憶系統設計關鍵概念。
+* 涵蓋各種系統設計主題的摘要，包括優缺點比較及深入資源連結。
+* 針對不同面試時間表（短期、中期、長期）提供學習建議。
+* 詳細說明系統設計面試題目的解題步驟。
+* 探討各種系統設計模式，例如可擴充套件性、可用性、一致性模式等。
+* 解釋各種技術，例如 DNS、CDN、負載平衡器、反向代理、微服務、資料庫 (SQL 和 NoSQL)、快取、非同步處理和通訊協定 (TCP、UDP、RPC、REST)。
+
+
+#### 如何使用
+
+* 根據自身面試時間表（短期、中期、長期），參考提供的學習指南，選擇性地學習不同主題。
+* 閱讀系統設計主題摘要，瞭解系統運作方式。
+* 參考公司工程部落格文章和真實案例架構，深入瞭解實際應用。
+* 練習系統設計面試題目及其解決方案，熟悉解題流程。
+* 參考「如何應對系統設計面試題目」章節，學習解題步驟：定義用例、限制和假設；建立高層次設計；設計核心元件；擴充套件設計。
+* 參考附錄中的資源，例如二的冪次方表和程式設計師應瞭解的延遲資料，進行估算。
+*  善用提供的 Anki flashcards 進行學習。
+## 📌 [imputnet/cobalt](https://github.com/imputnet/cobalt)
+<Callout>
+    Description: best way to save what you love\
+    🌐 Svelte｜⭐️ 22,775 | 2441 stars this week
+</Callout>
+    #### 簡介
+
+* Cobalt 是一個友善、高效的媒體下載器，沒有廣告、追蹤器、付費牆或其他惱人的功能。
+* 它旨在提供簡潔易用的下載體驗，讓使用者能輕鬆下載公開可取得的媒體內容。
+* Cobalt 並不快取任何內容，它運作方式類似一個高階代理伺服器。
+* Cobalt 專案包含 API、前端和相關套件的程式碼，以及相關檔案。
+* Cobalt 強調使用者對下載內容的使用及分發負完全責任，且不承擔任何法律責任。
+* Cobalt 僅能下載免費且公開可取得的內容，無法用於下載受版權保護的內容。
+*  Cobalt 的主要處理伺服器託管在 RoyaleHosting.net，並感謝其贊助與支援。
+*  使用者可透過任何瀏覽器的開發者工具下載相同內容。
+
+
+#### 主要功能
+
+* 簡單易用的媒體下載：貼上連結，即可取得檔案。
+* 無廣告、追蹤器、付費牆等幹擾。
+* 高效能的下載速度。
+* 友善的使用者介面。
+* 作為一個代理伺服器運作，不快取任何內容。
+* 支援多種媒體檔案格式的下載 (具體格式需參考其檔案)。
+
+
+#### 如何使用
+
+* 貼上您想下載媒體的連結到 Cobalt。
+* Cobalt 會處理該連結並提供下載選項。
+* 選擇您要下載的檔案格式和品質。
+* 開始下載。
+*  詳細的使用說明請參考 Cobalt 的官方檔案，包含 API 檔案、執行 Cobalt 例項、保護 Cobalt 例項以及為 YouTube 設定 Cobalt 例項等教學。
+## 📌 [tldraw/tldraw](https://github.com/tldraw/tldraw)
+<Callout>
+    Description: whiteboard / infinite canvas SDK\
+    🌐 TypeScript｜⭐️ 37,813 | 1230 stars this week
+</Callout>
+    #### 簡介
+
+* tldraw 是一個基於 React 的函式庫，用於建立無限畫布體驗。
+* 它也是 tldraw.com 線上數位白板的底層軟體。
+* 提供完善的檔案和說明，詳見 tldraw.dev。
+* 提供商業和非商業用途的 SDK，需保留「Made with tldraw」浮水印，或購買商業授權移除浮水印。
+
+
+#### 主要功能
+
+* 建立無限畫布的 React 函式庫。
+* 提供 `Tldraw` 元件，方便整合至 React 專案。
+* 支援自訂功能及樣式。
+* 包含範例應用程式，方便開發者學習及測試。
+*  提供商業及非商業用途授權，但需遵守授權條款。
+
+
+#### 如何使用
+
+* 使用 npm 安裝： `npm i tldraw`
+* 匯入 `Tldraw` 元件和 CSS：
+```javascript
+import { Tldraw } from 'tldraw'
+import 'tldraw/tldraw.css'
+```
+* 在 React 元件中使用 `Tldraw` 元件：
+```javascript
+<div style={{ position: 'fixed', inset: 0 }}>
+  <Tldraw />
+</div>
+```
+*  本地開發需 clone 儲存庫，啟用 corepack，安裝相依套件並執行 `yarn dev`。
+*  更多資訊請參考 tldraw.dev。
