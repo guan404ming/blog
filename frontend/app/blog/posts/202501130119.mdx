@@ -1,0 +1,178 @@
+---
+title: '[1/13 - 1/19] GitHub Weekly Digest'
+publishedAt: '2025-01-19'
+---
+## 📌 [TabbyML/tabby](https://github.com/TabbyML/tabby)
+<Callout>
+    Description: Self-hosted AI coding assistant\
+    🌐 Rust｜⭐️ 28,294 | 5838 stars this week
+</Callout>
+    #### 簡介
+
+Tabby 是一款自託管的 AI 程式碼輔助工具，提供 GitHub Copilot 的開源且本地部署替代方案。它不需要資料庫管理系統 (DBMS) 或雲端服務，具有 OpenAPI 介面，易於與現有基礎架構（例如雲端 IDE）整合，並支援消費級 GPU。Tabby 定期更新，新增功能包含增強的回答引擎使用者體驗、支援在回答引擎中切換不同的後端聊天模型、以及整合 Llamafile 部署等。
+
+
+#### 主要功能
+
+* 自託管，無需 DBMS 或雲端服務。
+* OpenAPI 介面，方便整合至現有基礎架構。
+* 支援消費級 GPU。
+* 回答引擎 (Answer Engine)：整合開發團隊內部資料，提供可靠且精確的答案。
+* 程式碼自動完成 (Code Completion)：包含本地相關程式碼片段 (來自本地 LSP 和最近修改的程式碼)。
+* 支援多種模型：例如 StarCoder-1B、Qwen2-1.5B-Instruct、CodeLlama 7B 等。
+* 團隊管理和安全存取。
+* 與多種 IDE 整合：VSCode、Vim、IntelliJ 等。
+* 與 Gitlab、GitHub 等平臺整合。
+* 提供團隊使用分析報告。
+
+
+#### 如何使用
+
+* 使用 Docker 執行 Tabby：
+```bash
+docker run -it \
+  --gpus all -p 8080:8080 -v $HOME/.tabby:/data \
+  tabbyml/tabby \
+  serve --model StarCoder-1B --device cuda --chat-model Qwen2-1.5B-Instruct
+```
+*  更多選項 (例如推論型別、平行處理) 請參考檔案。
+*  安裝 IDE/編輯器擴充套件。
+*  設定 Tabby (參閱檔案)。
+## 📌 [unclecode/crawl4ai](https://github.com/unclecode/crawl4ai)
+<Callout>
+    Description: 🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper\
+    🌐 Python｜⭐️ 25,820 | 1863 stars this week
+</Callout>
+    #### 簡介
+
+Crawl4AI 是一個開源、高效能的網頁爬蟲與資料擷取工具，專為大型語言模型 (LLM)、AI 代理程式和資料管道而設計。它提供快速、精準且易於部署的功能，讓開發者能輕鬆獲取網頁資料。Crawl4AI 以其速度和靈活性著稱，是 GitHub 上熱門的專案，並擁有活躍的社群支援。它能生成乾淨、結構化的 Markdown 檔案，並支援多種瀏覽器、代理伺服器以及自定義設定，方便使用者進行各種網頁資料擷取任務。
+
+
+#### 主要功能
+
+* **Markdown 生成:**  產生乾淨、結構化的 Markdown 檔案，並包含標題、引用和參考文獻。支援自定義策略，可根據需求調整 Markdown 的格式。使用 BM25 演演算法過濾不相關內容。
+* **結構化資料擷取:** 支援所有 LLM (開源和商業) 進行結構化資料擷取。提供多種分段策略 (主題式、正規表示式、句子級別)，並使用餘弦相似度查詢相關內容。支援基於 CSS 選擇器和 XPath 的快速資料擷取，以及自定義 Schema 定義。
+* **瀏覽器整合:**  支援 Chromium、Firefox 和 WebKit 等多種瀏覽器，並提供瀏覽器狀態管理、代理支援、以及完整的瀏覽器控制 (修改標頭、Cookie、使用者代理等)。能自動調整瀏覽器視窗大小以確保完整渲染網頁內容。
+* **爬蟲與擷取:** 支援媒體檔案 (圖片、音訊、影片) 擷取，並能執行 JavaScript 以擷取動態內容。支援螢幕截圖、原始 HTML 處理、連結擷取、自定義 Hook、快取機制、以及後設資料擷取。能處理 Lazy Load 和無限捲動頁面。
+* **部署:** 提供 Docker 部署方案，並支援 API Gateway，方便大規模生產環境部署。
+
+
+#### 如何使用
+
+* **安裝:** 使用 `pip install -U crawl4ai` 安裝套件，並執行 `crawl4ai-setup` 完成後續設定。若遇到瀏覽器相關問題，可使用 `python -m playwright install --with-deps chromium` 手動安裝。
+* **執行簡單爬蟲:**  使用提供的程式碼範例，利用 `AsyncWebCrawler` 類別執行爬蟲任務，並取得 Markdown 格式的結果。範例程式碼如下:
+
+```python
+import asyncio
+from crawl4ai import *
+
+async def main():
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url="https://www.example.com")
+        print(result.markdown)
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
+
+* **進階用法:**  參考提供的進階範例，學習如何使用自定義 Markdown 生成策略、結構化資料擷取策略 (包含使用 LLM)、以及自定義瀏覽器設定等。支援 Docker 部署，詳細步驟請參考檔案。
+## 📌 [kamranahmedse/developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
+<Callout>
+    Description: Interactive roadmaps, guides and other educational content to help developers grow in their careers.\
+    🌐 TypeScript｜⭐️ 306,247 | 1708 stars this week
+</Callout>
+    #### 簡介
+
+roadmap.sh 是一個社群驅動的資源平臺，提供開發者互動式的學習路線圖 (Roadmaps)、最佳實務文章和參考資料。涵蓋前端、後端、DevOps、全端、AI、資料科學、雲端等多個領域，並持續更新中。使用者可以點選路線圖中的節點，深入瞭解各個主題。
+
+
+#### 主要功能
+
+* 提供多種領域的互動式學習路線圖 (Roadmaps)，例如前端、後端、DevOps、全端開發、AI、資料科學等。
+* 收錄各領域的最佳實務 (Best Practices)，例如後端效能、前端效能、程式碼審查、API 安全性、AWS 等。
+* 提供各領域的練習題 (Questions)，例如 JavaScript、Node.js、React、後端、前端等，幫助使用者測試和提升技能。
+* 允許使用者瀏覽並選擇適合自己的學習路徑。
+* 社群導向，鼓勵使用者分享並貢獻資源。
+
+
+#### 如何使用
+
+* 瀏覽 roadmap.sh 網站，選擇感興趣的領域。
+* 點選路線圖 (Roadmap) 中的節點，檢視相關主題的資訊。
+* 閱讀最佳實務 (Best Practices) 文章，提升技能。
+* 練習提供的題目 (Questions)，檢驗學習成果。
+* 參考 “Get Started” 頁面，選擇適合自己的學習路徑。
+*  參與社群，分享學習經驗和資源。  (需註冊或登入)
+*  (選項) 複製程式碼庫，安裝依賴項並啟動應用程式 (適用於開發者貢獻)。  `git clone git@github.com:` (僅提供片段，完整指令未提供)
+## 📌 [feder-cr/Jobs_Applier_AI_Agent](https://github.com/feder-cr/Jobs_Applier_AI_Agent)
+<Callout>
+    Description: Auto_Jobs_Applier_AI_Agent aims to easy job hunt process by automating the job application process. Utilizing artificial intelligence, it enables users to apply for multiple jobs in an tailored way.\
+    🌐 Python｜⭐️ 26,574 | 1703 stars this week
+</Callout>
+    #### 簡介
+
+Auto_Jobs_Applier_AIHawk 是一款尖端的自動化工具，旨在徹底改變求職和申請流程。在當今競爭激烈的就業市場中，這個程式透過利用自動化和人工智慧的力量，為求職者提供顯著的優勢，讓他們能更快找到理想工作。它能幫助求職者節省大量時間，避免因重複性工作而產生的疲勞。此工具持續發展，歡迎使用者提供回饋和貢獻。
+
+
+#### 主要功能
+
+* 自動化求職申請流程。
+* 提供個人化求職建議。
+* 利用人工智慧(AI)最佳化求職策略。
+* 支援多種大型語言模型(LLM)，例如OpenAI、Ollama、Claude和Gemini。
+* 可產生個人化的履歷和求職信。
+* 根據個人資料自動填寫求職表格。
+* 提供結構化的履歷範本，方便使用者輸入個人資訊。
+* 具有錯誤排除機制，方便使用者解決常見問題。
+* 透過GitHub持續更新和維護。
+* 提供社群支援(Telegram)。
+
+
+#### 如何使用
+
+* **安裝:**  需要安裝Python 3.10或以上版本、Google Chrome瀏覽器，並從GitHub複製程式碼庫。使用Python虛擬環境安裝必要的套件，並安裝Visual C++ Build Tools。
+* **設定:** 設定`secrets.yaml`檔案 (包含LLM API金鑰)，以及`config.py`檔案 (設定LLM模型型別、模型名稱和API網址)。另外，需要準備`plain_text_resume.yaml`檔案，以結構化的格式輸入個人履歷資訊。`data_folder_example`資料夾提供範例檔案。
+* **執行:** 執行`python main.py`即可開始自動產生履歷和求職信。  確保`data_folder`資料夾包含`secrets.yaml`和`plain_text_resume.yaml`檔案。  輸出結果儲存在`Output Folder`。
+## 📌 [KoljaB/RealtimeSTT](https://github.com/KoljaB/RealtimeSTT)
+<Callout>
+    Description: A robust, efficient, low-latency speech-to-text library with advanced voice activity detection, wake word activation and instant transcription.\
+    🌐 Python｜⭐️ 3,926 | 1536 stars this week
+</Callout>
+    #### 簡介
+
+RealtimeSTT 是一個易於使用、低延遲的語音轉文字函式庫，適用於即時應用程式。它能即時將語音轉換成文字，具備語音活動偵測 (Voice Activity Detection)、即時轉錄 (Realtime Transcription) 和喚醒詞啟用 (Wake Word Activation) 等功能。RealtimeSTT 基於 Faster_Whisper 模型進行轉錄，並使用 WebRTCVAD 和 SileroVAD 進行語音活動偵測，以及 Porcupine 或 OpenWakeWord 進行喚醒詞偵測。  它衍生自 Linguflex 專案，並與 RealtimeTTS 函式庫共同組成強大的即時音訊處理工具。
+
+
+#### 主要功能
+
+* **即時語音轉文字 (Realtime Speech-to-Text):**  將語音即時轉換為文字。
+* **語音活動偵測 (Voice Activity Detection):** 自動偵測說話的開始和結束時間，提高轉錄效率。
+* **喚醒詞啟用 (Wake Word Activation):**  透過指定喚醒詞啟動語音辨識，例如 "Jarvis"、"Hey Google" 等。
+* **多種模型支援:** 支援不同大小的 Whisper 模型 (tiny, base, small, medium, large)，可根據需求選擇模型大小與效能。
+* **GPU 加速:** 支援 CUDA，可利用 GPU 加速轉錄速度。
+* **客製化設定:** 提供多項引數設定，例如模型選擇、語言設定、靈敏度調整等。
+* **回呼函式 (Callbacks):**  允許使用者自定義在錄音開始、結束、轉錄開始等事件發生時的動作。
+* **音訊串流輸入:** 支援直接輸入 PCM 音訊串流，而非僅限於麥克風輸入。
+
+
+#### 如何使用
+
+* **安裝:** 使用 `pip install RealtimeSTT` 安裝函式庫及其相依性。  需視需求安裝 CUDA 與相關套件以支援 GPU 加速。
+* **基本用法:** 使用 `AudioToTextRecorder` 類別進行錄音和轉錄。可選擇手動啟動/停止錄音，或使用語音活動偵測自動錄音。
+* **進階用法:**  設定喚醒詞 (wake_words) 以啟動錄音；使用回呼函式 (callbacks) 自訂事件處理；使用 `feed_audio` 方法輸入自定義音訊串流。
+* **程式碼範例:**  程式碼範例展示瞭如何印出轉錄文字、將文字輸入至螢幕、以及設定回呼函式等操作。
+* **錯誤處理:**  使用 `with` 語法或 `shutdown()` 方法安全地關閉錄音器。
+* **測試:**  專案包含測試指令碼，可協助評估和理解函式庫的功能。
+
+
+```python
+from RealtimeSTT import AudioToTextRecorder
+
+def process_text(text):
+    print(text)
+
+if __name__ == '__main__':
+    recorder = AudioToTextRecorder()
+    while True:
+        recorder.text(process_text)
+```
