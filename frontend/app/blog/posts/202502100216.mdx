@@ -1,0 +1,169 @@
+---
+title: '[2/10 - 2/16] GitHub Weekly Digest'
+publishedAt: '2025-02-16'
+---
+## 📌 [unslothai/unsloth](https://github.com/unslothai/unsloth)
+<Callout>
+    Description: Finetune Llama 3.3, DeepSeek-R1 & Reasoning LLMs 2x faster with 70% less memory! 🦥\
+    🌐 Python｜⭐️ 29,330 | 5047 stars this week
+</Callout>
+    #### 簡介
+
+Unsloth.ai 是一個平臺，提供快速且記憶體效率高的大型語言模型 (LLM) 微調服務。它支援多種流行的 LLM，例如 Llama 3.3、Mistral、Phi-4、Qwen 2.5 和 Gemma，並宣稱能將微調速度提升兩倍，同時減少 80% 的記憶體使用量。Unsloth 使用 OpenAI 的 Triton 語言編寫核心程式碼，並採用多項技術最佳化效能，例如動態 4 位元量化和高效的 LoRA 微調方法。使用者可透過免費的 Jupyter Notebook 快速上手，無需深入瞭解底層技術細節。  Unsloth 也持續更新，新增支援更多模型、功能和最佳化。
+
+
+#### 主要功能
+
+* **快速微調:**  將 LLM 微調速度提升兩倍。
+* **低記憶體消耗:** 減少 80% 的記憶體使用量。
+* **支援多種模型:** 包括 Llama 3.3、Mistral、Phi-4、Qwen 2.5、Gemma 以及其他模型。
+* **免費 Jupyter Notebook:** 提供易於使用的筆記本，讓使用者快速開始微調。
+* **多種輸出格式:** 支援將微調後的模型匯出為 GGUF、Ollama、vLLM 或上傳至 Hugging Face。
+* **支援 4 位元和 16 位元 QLoRA/LoRA 微調:** 利用 bitsandbytes 進行高效的微調。
+* **支援長上下文:**  透過最佳化技術，能處理更長的上下文視窗。
+* **支援推理:** 提供所有支援模型的 2x 更快推理。
+* **開源且持續更新:**  不斷新增功能和支援更多模型。
+* **支援推理模型：**提供多種推理模型，例如DeepSeek-R1。
+
+
+#### 如何使用
+
+* 使用者可透過提供的免費 Jupyter Notebook 開始微調。
+* 加入自己的資料集。
+* 點選 "Run All" 執行所有程式碼。
+* 系統會自動進行微調，並將微調後的模型輸出至使用者指定的格式 (GGUF, Ollama, vLLM 或 Hugging Face)。
+*  Unsloth 提供 `pip install unsloth` 或 `conda` 安裝方式，需根據自身環境選擇合適的安裝指令，並注意 CUDA 版本和 PyTorch 版本的相容性。
+*  程式碼範例展示瞭如何使用 `FastLanguageModel`、`SFTTrainer` 和 `TrainingArguments` 等物件來進行模型的載入、微調和訓練。
+*  詳細的安裝和使用說明可參考官方檔案。
+*  支援多種模型，使用時需指定模型名稱。
+*  支援調整引數，例如 `max_seq_length`、`batch size` 等。
+*  可參考提供的範例程式碼，調整訓練引數以最佳化訓練效果。
+## 📌 [langgenius/dify](https://github.com/langgenius/dify)
+<Callout>
+    Description: Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production.\
+    🌐 TypeScript｜⭐️ 67,512 | 4303 stars this week
+</Callout>
+    #### 簡介
+
+Dify 是一個開源的 LLM 應用程式開發平臺，提供直觀的介面，結合了 Agentic AI 工作流程、RAG Pipeline、Agent 功能、模型管理、可觀察性功能等，讓使用者可以快速從原型製作到生產環境部署。它支援多種模型，包含 GPT、Mistral、Llama3 等，並提供雲端託管和自託管選項。  使用者可透過 Docker Compose 快速部署，並在瀏覽器上存取 Dify 儀錶板。 此外，Dify 也提供企業級功能及多元的部署方式，例如使用 Terraform 或 AWS CDK 部署至雲端平臺。
+
+
+#### 主要功能
+
+* **Workflow (工作流程):**  在視覺化畫布上構建和測試強大的 AI 工作流程。
+* **Comprehensive Model Support (全面模型支援):**  無縫整合數百種專有/開源 LLM，涵蓋 GPT、Mistral、Llama3 等。
+* **Prompt IDE (提示工程 IDE):**  直觀的介面用於製作提示詞、比較模型效能，並新增例如文字轉語音等功能。
+* **RAG Pipeline (檢索增強生成 Pipeline):**  支援從 PDF、PPT 等常見檔案格式中提取文字。
+* **Agent Capabilities (Agent 功能):**  基於 LLM Function Calling 或 ReAct 定義 Agent，並新增預建或自定義工具。提供 50 多種內建工具，例如 Google Search、DALL·E、Stable Diffusion 和 WolframAlpha。
+* **LLMOps:** 監控和分析應用程式日誌和效能。
+* **Backend-as-a-Service (後端即服務):** 提供對應的 API，方便整合至自身商業邏輯。
+* **企業級功能:** 提供單點登入 (SSO) 和存取控制等企業級功能。
+* **本地部署:** 支援本地部署。
+
+
+#### 如何使用
+
+* **雲端部署:** 使用 Dify Cloud 服務，無需任何設定即可開始使用，沙盒方案提供 200 次免費 GPT-4 呼叫。
+* **自託管部署:**  使用 Docker Compose 快速部署 Dify Community Edition。詳細說明請參考檔案。
+* **企業部署:**  Dify 提供企業級功能，可聯絡 Dify 團隊討論企業需求。
+* **AWS 部署:** 使用 Dify Premium on AWS Marketplace，一鍵部署到 AWS VPC。
+* **進階設定:**  修改 `.env` 和 `docker-compose.yaml` 檔案進行自定義配置。
+* **Kubernetes 部署:** 使用社群提供的 Helm Charts 和 YAML 檔案在 Kubernetes 上部署 Dify。
+* **Terraform 部署:** 使用 Terraform 一鍵部署到 Azure 或 Google Cloud 平臺。
+* **AWS CDK 部署:** 使用 AWS CDK 部署到 AWS。
+## 📌 [infiniflow/ragflow](https://github.com/infiniflow/ragflow)
+<Callout>
+    Description: RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding.\
+    🌐 Python｜⭐️ 36,202 | 3445 stars this week
+</Callout>
+    #### 簡介
+
+RAGFlow 是一個基於深度檔案理解的開源 RAG (Retrieval-Augmented Generation) 引擎。它提供簡潔的 RAG 工作流程，適用於任何規模的企業，結合大型語言模型 (LLM) 提供基於事實的問答功能，並從各種複雜格式的資料中提供可靠的引文佐證。 RAGFlow 支援多種異質資料來源，例如 Word 檔案、簡報、Excel 表格、文字檔、圖片、掃描檔案、結構化資料、網頁等等，並具備模板化的分塊、自動化工作流程以及可配置的 LLM 和嵌入模型等優點，有效減少幻覺並提升問答準確性。
+
+
+#### 主要功能
+
+* 深度檔案理解：從複雜格式的非結構化資料中提取知識。
+* 模板化的分塊：智慧且可解釋的分塊方式，提供多種模板選項。
+* 基於事實的引文：減少模型幻覺，提供可追溯的引文支援。
+* 異質資料來源相容性：支援 Word、簡報、Excel、txt、圖片、掃描檔案、結構化資料、網頁等多種資料格式。
+* 自動化且簡便的 RAG 工作流程：簡化的 RAG 流程，適用於個人和大型企業。
+* 可配置的 LLM 和嵌入模型：支援多種大型語言模型和嵌入模型。
+* 多重召回和融合重新排序：提升資訊檢索的準確性和效率。
+* 直觀的 API：方便與業務系統整合。
+
+
+#### 如何使用
+
+* **前提條件:** CPU >= 4 cores, RAM >= 16 GB, Disk >= 50 GB, Docker >= 24.0.0 & Docker Compose >= v2.26.1。
+* **克隆程式碼:** `git clone https://github.com/infiniflow/ragflow.git`
+* **設定系統引數:** 確保 `vm.max_map_count >= 262144`。
+* **使用預建 Docker 映像啟動伺服器:**  `cd ragflow; docker compose -f docker/docker-compose.yml up -d`  (可選擇不同版本的 Docker 映像)。
+* **檢查伺服器狀態:** `docker logs -f ragflow-server`  確認伺服器已成功啟動。
+* **存取 RAGFlow:**  在瀏覽器輸入伺服器 IP 地址 (預設埠為 80)。
+* **設定 LLM 和 API 金鑰:** 在 `service_conf.yaml.template` 中選擇 LLM 並更新 API 金鑰。
+* **配置設定:**  透過 `.env`、`service_conf.yaml.template` 和 `docker-compose.yml`  檔案進行系統配置。  修改配置後需要重新啟動容器。
+* **切換檔案引擎 (選項):** 可將檔案引擎從 Elasticsearch 切換到 Infinity (需遵循步驟停止、設定 `DOC_ENGINE`、啟動)。
+## 📌 [Mintplex-Labs/anything-llm](https://github.com/Mintplex-Labs/anything-llm)
+<Callout>
+    Description: The all-in-one Desktop & Docker AI application with built-in RAG, AI agents, and more.\
+    🌐 JavaScript｜⭐️ 36,897 | 2414 stars this week
+</Callout>
+    #### 簡介
+
+AnythingLLM 是一款全功能 AI 應用程式，讓您可以將任何檔案、資源或內容轉換為上下文，供大型語言模型 (LLM) 在聊天過程中參考。它支援多種 LLM 和向量資料庫，並提供多使用者管理和許可權控制，可本地或遠端部署。  AnythingLLM 將檔案劃分為稱為工作空間的物件，每個工作空間如同一個執行緒，能維持上下文清晰。其特色包括自訂 AI 代理程式、無程式碼 AI 代理程式建構器、多模態支援、多使用者支援和許可權設定 (僅限 Docker 版本)、工作空間內的代理程式 (例如瀏覽網頁)、自訂嵌入式聊天小部件 (僅限 Docker 版本)、多種檔案型別支援 (PDF、TXT、DOCX 等) 以及簡單易用的拖放式聊天介面。
+
+
+#### 主要功能
+
+* 支援多種大型語言模型 (LLM)：包含 OpenAI、Azure OpenAI、AWS Bedrock 等知名商業 LLM 和許多開源 LLM。
+* 支援多種向量資料庫：例如 LanceDB、Astra DB、Pinecone 等。
+* 多模態支援：支援影象、文字等多種媒體輸入。
+* 多使用者與許可權管理：允許多個使用者存取並管理不同的工作空間和許可權。
+* 自訂 AI 代理程式：建立自訂的 AI 代理程式以執行特定任務，例如瀏覽網頁。
+* 自訂嵌入式聊天小部件：將聊天功能嵌入到您的網站中。
+* 豐富的檔案支援：支援多種檔案型別，例如 PDF、TXT、DOCX 等。
+* 簡單易用的拖放式介面：方便使用者管理檔案和進行聊天。
+* 完整的開發者 API：方便進行自定義整合。
+* 本地部署與雲端部署：支援 Docker 部署以及雲端平臺部署。
+
+
+#### 如何使用
+
+* **安裝與設定:**  透過下載或 Docker 安裝 AnythingLLM，並設定 .env 檔案以指定 LLM、向量資料庫和其他設定。 使用 `yarn setup`、`yarn dev:server`、`yarn dev:frontend` 和 `yarn dev:collector` 命令分別設定和啟動伺服器端、前端和檔案收集器。
+* **建立工作空間:** 建立新的工作空間來組織您的檔案和對話內容。
+* **上傳檔案:** 將檔案拖放到工作空間中，AnythingLLM 將自動處理並建立向量索引。
+* **開始聊天:**  在工作空間中輸入您的問題，AnythingLLM 將根據您的檔案提供相關的回答。
+* **使用 AI 代理程式:**  您可以使用內建或自定義的 AI 代理程式來擴充套件 AnythingLLM 的功能。
+* **管理使用者與許可權:**  (僅限 Docker 版本) 設定不同的使用者帳號並管理其許可權。
+* **部署至雲端:**  使用提供的指令碼和模板將 AnythingLLM 部署到 AWS、GCP、Digital Ocean 等雲端平臺。
+## 📌 [Bin-Huang/chatbox](https://github.com/Bin-Huang/chatbox)
+<Callout>
+    Description: User-friendly Desktop Client App for AI Models/LLMs (GPT, Claude, Gemini, Ollama...)\
+    🌐 TypeScript｜⭐️ 30,654 | 1959 stars this week
+</Callout>
+    #### 簡介
+
+Chatbox 社群版是一個開源 (GPLv3 授權) 的桌面應用程式，提供 ChatGPT、Claude 等大型語言模型 (LLM) 的桌面使用者端。雖然官方版功能更完整，但社群版依然易於使用，並支援多種 LLM 提供商，包括 OpenAI (ChatGPT)、Azure OpenAI、Claude、Google Gemini Pro 和 Ollama (支援 Llama 2 等本地模型)。  它注重本地資料儲存，保障使用者隱私，並提供跨平臺 (Windows、Mac、Linux) 使用體驗，以及網頁版和行動應用程式 (iOS & Android)。
+
+
+#### 主要功能
+
+* 本地資料儲存 (Local Data Storage)：確保資料安全和隱私。
+* 多種 LLM 支援 (Support for Multiple LLM Providers)：支援 OpenAI、Azure OpenAI、Claude、Google Gemini Pro 等。
+* Dall-E-3 影象生成 (Image Generation with Dall-E-3)：支援 Dall-E-3 影象生成功能。
+* 增強提示功能 (Enhanced Prompting)：提供進階提示功能，最佳化查詢效果。
+* 鍵盤快捷鍵 (Keyboard Shortcuts)：提升工作效率。
+* Markdown、Latex 和程式碼高亮顯示 (Markdown, Latex & Code Highlighting)：支援 Markdown、Latex 格式和程式碼高亮顯示。
+* 提示庫和訊息引用 (Prompt Library & Message Quoting)：方便儲存和管理提示，並引用訊息。
+* 即時回覆 (Streaming Reply)：提供快速、逐步的回覆。
+* 人性化介面和深色模式 (Ergonomic UI & Dark Theme)：友善的使用者介面，並提供深色模式。
+* 團隊協作 (Team Collaboration)：支援團隊協作和 OpenAI API 資源共享。
+* 跨平臺相容性 (Cross-Platform Availability)：支援 Windows、Mac 和 Linux 系統。
+* 網頁版和行動應用程式 (Access Anywhere with the Web Version & iOS & Android)：提供網頁版和行動應用程式。
+* 多語言支援 (Multilingual Support)：支援多種語言，包含繁體中文。
+
+
+#### 如何使用
+
+Chatbox 提供下載安裝套件 (No-Deployment Installation Packages)，使用者可直接下載安裝，無需複雜設定。  其介面直覺易用，支援多種 LLM 的切換和設定。  使用者可輸入文字提示，利用程式提供的功能，如 Markdown 和 Latex 編輯，來產生更精確的回覆。  此外，Chatbox 提供提示庫和訊息引用功能，方便管理和追蹤對話內容。  使用者可透過鍵盤快捷鍵提高效率，並自訂介面主題 (例如深色模式)。  詳細使用方法可參考官方網站 chatboxai.app。
