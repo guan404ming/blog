@@ -1,0 +1,164 @@
+---
+title: '[2/17 - 2/23] GitHub Weekly Digest'
+publishedAt: '2025-02-23'
+---
+## 📌 [microsoft/OmniParser](https://github.com/microsoft/OmniParser)
+<Callout>
+    Description: A simple screen parsing tool towards pure vision based GUI agent\
+    🌐 Jupyter Notebook｜⭐️ 16,272 | 10172 stars this week
+</Callout>
+    #### 簡介
+
+OmniParser 是一個用於解析使用者介面螢幕截圖的工具，將截圖轉換成結構化且易於理解的元素。這大幅提升了基於純視覺的 GUI 代理程式 (例如 GPT-4V) 產生精確對應介面區域動作的能力。它在 Windows Agent Arena 獲得最佳效能，並曾登上 Hugging Face 模型中心趨勢榜首。OmniParser 提供 V1.5 和 V2 版本，V2 版本在新的 Screen Spot Pro 基準測試中取得了 39.5% 的最佳成績。  OmniTool 作為其延伸應用，允許使用者透過 OmniParser 和自選的視覺模型來控制 Windows 11 虛擬機器。
+
+
+#### 主要功能
+
+* 解析使用者介面螢幕截圖，將其轉換為結構化元素。
+* 精確識別螢幕元素，包含細微圖示。
+* 預測每個螢幕元素是否可互動。
+* 提供 V1.5 和 V2 版本，V2 版本具有更高的準確性和效能。
+* 與多種大型語言模型相容，例如 OpenAI、DeepSeek、Qwen 和 Anthropic Computer Use。
+* 提供 Gradio 介面進行示範。
+*  透過 OmniTool 讓使用者控制 Windows 11 虛擬機器。
+
+
+#### 如何使用
+
+* 複製 OmniParser 儲存庫。
+* 建立並啟用 conda 環境：`conda create -n "omni" python==3.12`，`conda activate omni`。
+* 安裝需求套件：`pip install -r requirements.txt`。
+* 下載 V2 模型權重至 `weights` 資料夾 (確保 `icon_caption_florence` 資料夾存在)：使用提供的 Hugging Face CLI 指令下載模型檢查點。
+* 執行範例程式碼 (位於 `demo.ipynb`)。
+* 執行 Gradio 介面：`python gradio_demo.py`。
+## 📌 [langgenius/dify](https://github.com/langgenius/dify)
+<Callout>
+    Description: Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production.\
+    🌐 TypeScript｜⭐️ 70,957 | 3600 stars this week
+</Callout>
+    #### 簡介
+
+Dify 是一個開源的 LLM 應用程式開發平臺，提供直覺的介面，結合代理式 AI 工作流程、RAG 管線、代理功能、模型管理、可觀察性功能等，讓使用者能快速從原型開發到產品生產。它支援多種 LLM 模型，並提供雲端託管和自託管選項。使用者能建立強大的 AI 工作流程、使用直覺的 Prompt IDE 編寫提示、利用完善的 RAG 管線處理檔案，以及使用各種代理功能和內建工具。Dify 也提供後端即服務 (Backend-as-a-Service) 和完善的 LLMOps 功能，方便使用者監控和分析應用程式效能。
+
+
+#### 主要功能
+
+* **Workflow:**  視覺化工作流程建構和測試，整合多種功能。
+* **Comprehensive Model Support:**  支援數百種專有/開源 LLM 模型，涵蓋 GPT、Mistral、Llama3 等。
+* **Prompt IDE:**  直覺的介面用於設計提示詞，比較模型效能，並新增例如文字轉語音等功能。
+* **RAG Pipeline:**  涵蓋檔案匯入到檢索的完整 RAG 功能，支援 PDF、PPT 等常見檔案格式的文字提取。
+* **Agent Capabilities:**  基於 LLM Function Calling 或 ReAct 定義代理程式，並新增預建或自定義工具，提供 50 多種內建工具，例如 Google Search、DALL·E 等。
+* **LLMOps:**  監控和分析應用程式日誌和效能，根據生產資料和註釋持續改進提示詞、資料集和模型。
+* **Backend-as-a-Service:** 提供 API，方便整合到使用者自身業務邏輯。
+* **Local Deployment & Cloud Hosting:** 提供自託管和雲端託管兩種部署方式。
+
+
+#### 如何使用
+
+* **雲端部署:**  使用 Dify Cloud 服務，無需設定即可開始使用，沙盒方案提供 200 次免費 GPT-4 呼叫。
+* **自託管部署:**  使用 Docker Compose 快速部署 Dify 社群版，詳細說明請參考檔案。
+* **企業部署:**  提供額外的企業級功能，可聯絡 Dify 團隊討論企業需求，並提供 AWS Marketplace 上的 Dify Premium 方案。
+* **進階設定:**  修改 `.env` 和 `docker-compose.yaml` 檔案調整設定，並可使用 Kubernetes 部署(透過社群提供的 Helm Charts 和 YAML 檔案)。
+* **Terraform 和 AWS CDK 部署:** 提供使用 Terraform 和 AWS CDK 部署到雲平臺的選項。
+## 📌 [FujiwaraChoki/MoneyPrinterV2](https://github.com/FujiwaraChoki/MoneyPrinterV2)
+<Callout>
+    Description: Automate the process of making money online.\
+    🌐 Python｜⭐️ 10,233 | 3353 stars this week
+</Callout>
+    #### 簡介
+
+* MoneyPrinter V2 (MPV2) 是 MoneyPrinter 計畫的第二版，徹底改寫了原始程式碼，著重於更廣泛的功能和更具模組化的架構。
+* 需要 Python 3.9 才能有效運作。
+* 提供多種語言版本，社群共同開發。
+* 旨在自動化線上賺錢流程。
+* 透過GitHub 開源。
+
+
+#### 主要功能
+
+* Twitter機器人 (使用 CRON Jobs 排程)。
+* YouTube 短片自動化 (使用 CRON Jobs 排程)。
+* 聯盟行銷 (Amazon + Twitter)。
+* 尋找在地商家並進行冷開發 (Cold Outreach)。
+* 提供多種語言版本 (例如：中文版 MoneyPrinterTurbo)。
+* 使用指令碼方便存取核心功能，無需使用者互動。
+
+
+#### 如何使用
+
+* 安裝 Microsoft Visual C++ build tools (CoquiTTS 正常運作所需)。
+* 如需透過電子郵件聯絡收集到的商家，請先安裝 Go 程式語言。
+* 使用 git clone https://github.com/FujiwaraChoki/MoneyPrinterV2.git 下載程式碼。
+* 複製並填寫 config.example.json 檔案中的設定值，另存為 config.json。
+* 建立虛擬環境 (python -m venv venv)。
+* 啟用虛擬環境 (Windows: .\venv\Scripts\activate；Unix: source venv/bin/activate)。
+* 安裝套件 (pip install -r requirements.txt)。
+* 執行應用程式 (python src/main.py)。
+* 可使用 scripts 目錄中的指令碼直接存取核心功能。
+## 📌 [jingyaogong/minimind](https://github.com/jingyaogong/minimind)
+<Callout>
+    Description: 🚀🚀 「大模型」2小时完全从0训练26M的小参数GPT！🌏 Train a 26M-parameter GPT from scratch in just 2h!\
+    🌐 Python｜⭐️ 12,017 | 2984 stars this week
+</Callout>
+    #### 簡介
+
+MiniMind 是一個輕量級的開源大型語言模型 (LLM) 專案，旨在以極低的成本和時間，讓使用者從零開始訓練一個小型語言模型。最小版本僅需 25.8M，約為 GPT-3 的七千分之一，即使使用普通的個人 GPU 也能快速訓練。此專案提供完整的程式碼，涵蓋資料集清洗、預訓練 (Pretrain)、監督微調 (SFT)、LoRA 微調、直接偏好強化學習 (DPO) 演算法、模型蒸餾等所有步驟，並提供多模態版本 MiniMind-V。  本專案不僅是一個 LLM 的完整開源實現，更是一個 LLM 入門教程，希望能降低 LLM 的學習門檻，讓更多人參與。
+
+
+#### 主要功能
+
+*   提供 MiniMind-LLM 結構的完整程式碼 (Dense+MoE 模型)。
+*   包含 Tokenizer 分詞器訓練程式碼。
+*   涵蓋 Pretrain、SFT、LoRA、RLHF-DPO、模型蒸餾等完整訓練流程程式碼。
+*   提供已清洗、去重的高品質資料集，並全部開源。
+*   從零實現預訓練、指令微調、LoRA、DPO 強化學習及白盒模型蒸餾，且幾乎不依賴第三方框架。
+*   支援 transformers、trl、peft 等主流第三方框架。
+*   支援單機單卡、單機多卡 (DDP、DeepSpeed) 訓練，並支援 wandb 訓練流程視覺化及動態啟停訓練。
+*   在 C-Eval、C-MMLU、OpenBookQA 等第三方評測榜單上進行模型測試。
+
+
+#### 如何使用
+
+*   **步驟 0：**  使用 Git clone 專案程式碼：`git clone https://github.com/jingyaogong/minimind.git`
+*   **步驟 1：** 安裝所需套件：`pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple`
+*   **使用現有模型：** 下載模型並執行 `eval_model.py`  或啟動 WebUI (`streamlit run web_demo.py`) 進行推理。
+*   **從零開始訓練：**
+    *   下載資料集 (放置於 `./dataset` 目錄下)。推薦使用 `pretrain_hq.jsonl` + `sft_mini_512.jsonl` 快速訓練 Zero 模型。
+    *   執行預訓練：`python train_pretrain.py` (生成 `pretrain_*.pth`)
+    *   執行監督微調：`python train_full_sft.py` (生成 `full_sft_*.pth`)
+    *   (選項) 執行其他訓練步驟：RLHF ( `train_dpo.py` )、LoRA ( `train_lora.py` )、模型蒸餾 ( `train_distillation.py` )、推理模型訓練 ( `train_distill_reason.py` )。
+    *   測試模型效果：`python eval_model.py`
+*   多卡訓練：使用 `torchrun` 或 `deepspeed` 命令，詳見 README。
+## 📌 [infiniflow/ragflow](https://github.com/infiniflow/ragflow)
+<Callout>
+    Description: RAGFlow is an open-source RAG (Retrieval-Augmented Generation) engine based on deep document understanding.\
+    🌐 TypeScript｜⭐️ 39,072 | 2874 stars this week
+</Callout>
+    #### 簡介
+
+RAGFlow 是一個基於深度檔案理解的開源 RAG (Retrieval-Augmented Generation) 引擎，能為任何規模的企業提供簡化的 RAG 工作流程。它結合大型語言模型 (LLM)，提供基於可靠引證的真實問答能力，並支援各種複雜格式的資料。 RAGFlow 能夠從非結構化資料中提取知識，並支援多種資料來源，例如 Word、簡報、Excel、txt 檔案、圖片、掃描檔案、結構化資料、網頁等等。系統具備自動化和高效的 RAG 工作流程，可配置多種 LLM 和嵌入模型，並提供多種召回和重新排序機制。
+
+
+#### 主要功能
+
+* 深度檔案理解：從格式複雜的非結構化資料中提取知識。
+* 基於模板的分塊：智慧且可解釋，提供多種模板選項。
+* 基於可靠引證，減少幻覺：視覺化文字分塊，方便人工幹預；提供關鍵參考和可追溯的引證，支援可靠的答案。
+* 支援異構資料來源：支援 Word、簡報、Excel、txt 檔案、圖片、掃描檔案、結構化資料、網頁等。
+* 自動化和簡便的 RAG 工作流程：簡化的 RAG 流程，適用於個人和大型企業；可配置 LLM 和嵌入模型；多種召回配對及融合重新排序；提供直觀的 API，方便與業務無縫整合。
+* 支援 Pagerank 分數：在知識庫中加入 Pagerank 分數以提升搜尋結果相關性。
+* 關鍵字提取和相關問題生成：提升檢索準確度。
+* 支援透過 RAG 將文字轉換為 SQL 語句。
+
+
+#### 如何使用
+
+* **前置條件:** CPU 4 核心以上，RAM 16 GB 以上，磁碟空間 50 GB 以上，Docker >= 24.0.0 & Docker Compose >= v2.26.1。
+* **設定 `vm.max_map_count`:** 檢查並設定 `vm.max_map_count` 值至少為 262144。
+* **複製程式碼庫:** `git clone https://github.com/infiniflow/ragflow.git`
+* **啟動伺服器:** 使用預建的 Docker 映像檔啟動伺服器 (例如：`docker compose -f docker-compose.yml up -d`，可選擇不同版本的映像檔)。
+* **檢查伺服器狀態:**  `docker logs -f ragflow-server`  確認伺服器已成功啟動。
+* **設定 LLM 和 API 金鑰:** 在 `service_conf.yaml.template` 中選擇所需的 LLM factory 並更新 API_KEY。
+* **瀏覽器存取:** 在瀏覽器輸入伺服器 IP 位址進行存取。
+* **設定檔管理:**  `.env`、`service_conf.yaml.template` 和 `docker-compose.yml`  用於系統設定。  可自訂 HTTP 服務埠和資料庫設定等。  修改設定後需重新啟動容器。
+* **切換檔案引擎:** 可將檔案引擎從 Elasticsearch 切換到 Infinity (需停止並刪除容器，並修改 `docker/.env` 中的 `DOC_ENGINE` 設定)。
