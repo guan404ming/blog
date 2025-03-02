@@ -1,0 +1,163 @@
+---
+title: '[2/24 - 3/2] GitHub Weekly Digest'
+publishedAt: '2025-03-02'
+---
+## 📌 [langgenius/dify](https://github.com/langgenius/dify)
+<Callout>
+    Description: Dify is an open-source LLM app development platform. Dify's intuitive interface combines AI workflow, RAG pipeline, agent capabilities, model management, observability features and more, letting you quickly go from prototype to production.\
+    🌐 TypeScript｜⭐️ 75,776 | 4883 stars this week
+</Callout>
+    #### 簡介
+
+Dify 是一個開源的 LLM 應用程式開發平臺，提供直觀的介面，整合了代理式 AI 工作流程、RAG 管線、代理功能、模型管理、可觀察性功能等，讓使用者能快速從原型設計到產品生產。它支援各種 LLM 模型，並提供雲端和自託管部署選項，包含豐富的功能，例如工作流程建置、提示工程 IDE、RAG 管線、代理功能、LLMOps 和後端即服務等。使用者可以透過 Docker Compose 快速啟動伺服器，並在瀏覽器中訪問 Dify 儀錶板。
+
+
+#### 主要功能
+
+* **Workflow (工作流程):** 在視覺化畫布上構建和測試強大的 AI 工作流程。
+* **Comprehensive Model Support (全面的模型支援):**  無縫整合數百種專有/開源 LLM 模型，涵蓋 GPT、Mistral、Llama3 等，以及任何與 OpenAI API 相容的模型。
+* **Prompt IDE (提示工程 IDE):**  直覺的介面，用於製作提示、比較模型效能，並新增文字轉語音等功能。
+* **RAG Pipeline (RAG 管線):**  支援從 PDF、PPT 等常見檔案格式中提取文字的 RAG 功能。
+* **Agent Capabilities (代理功能):**  基於 LLM Function Calling 或 ReAct 定義代理，並新增預建或自定義工具。提供 50 多種內建工具，例如 Google Search、DALL·E、Stable Diffusion 和 WolframAlpha。
+* **LLMOps:** 監控和分析應用程式日誌和效能，基於生產資料和註釋持續改進提示、資料集和模型。
+* **Backend-as-a-Service (後端即服務):**  提供對應的 API，方便整合到自有商業邏輯中。
+* **Local Deployment (本地部署) & Cloud Deployment (雲端部署):** 支援本地和雲端部署。
+
+
+#### 如何使用
+
+* **Docker Compose 部署:**  使用 `docker compose up -d` 命令快速啟動 Dify 伺服器。
+* **瀏覽器訪問:**  在瀏覽器中訪問 http://localhost/install 開始初始化流程。
+* **雲端服務:**  使用 Dify 雲端服務，無需設定即可使用。
+* **自託管部署:**  參考檔案進行自託管部署。
+* **企業版:**  Dify 提供額外的企業級功能，可聯絡官方洽談。
+* **AWS Marketplace:**  在 AWS Marketplace 上部署 Dify Premium。
+* **進階設定:**  修改 `.env` 和 `docker-compose.yaml` 檔案進行自定義配置。
+* **Kubernetes 部署:**  使用社群貢獻的 Helm Charts 和 YAML 檔案在 Kubernetes 上部署 Dify。
+* **Terraform & AWS CDK 部署:** 使用 Terraform 或 AWS CDK 部署到雲端平臺。
+## 📌 [mastra-ai/mastra](https://github.com/mastra-ai/mastra)
+<Callout>
+    Description: The TypeScript AI agent framework. ⚡ Assistants, RAG, observability. Supports any LLM: GPT-4, Claude, Gemini, Llama.\
+    🌐 TypeScript｜⭐️ 8,572 | 4825 stars this week
+</Callout>
+    #### 簡介
+
+Mastra 是一個強大的 TypeScript 框架，旨在幫助你快速構建 AI 應用程式和功能。它提供了一套必要的基元：工作流程 (workflows)、代理 (agents)、基於檢索的生成 (RAG)、整合 (integrations) 和評估 (evals)。Mastra 可在本地機器上執行，也可部署到無伺服器雲端。它使用 Vercel AI SDK 進行模型路由，提供與任何大型語言模型 (LLM) 提供商（包括 OpenAI、Anthropic 和 Google Gemini）互動的統一介面。
+
+
+#### 主要功能
+
+* **LLM Models:** 支援多種 LLM 提供商，例如 OpenAI、Anthropic 和 Google Gemini，並提供模型選擇和回應串流功能。
+* **Agents:**  允許 LLM 模型選擇一系列動作，並提供 LLM 模型工具、工作流程和同步資料存取。可以呼叫自定義函式或第三方 API，以及存取你建立的知識庫。
+* **Tools:**  型別安全的函式，可由代理或工作流程執行，具備內建的整合訪問和引數驗證。每個工具都包含輸入定義、執行函式和整合訪問。
+* **Workflows:** 持久的基於圖形的狀態機，支援迴圈、分支、等待使用者輸入、嵌入其他工作流程、錯誤處理、重試和解析等功能。可以使用程式碼或視覺化編輯器構建。每個步驟都具有內建的 OpenTelemetry 追蹤。
+* **RAG:**  允許你為代理構建知識庫，包含資料擷取、轉換、載入和特定查詢技術（如分塊、嵌入和向量搜尋）。
+* **Integrations:**  自動生成的、型別安全的第三方服務 API 客戶端，可用作代理的工具或工作流程中的步驟。
+* **Evals:**  使用模型分級、基於規則和統計方法的自動化測試，評估 LLM 輸出，並返回 0-1 之間的標準化分數。
+
+
+#### 如何使用
+
+* **前提條件:** 需要 Node.js (v20.0+)。
+* **取得 LLM 提供商 API 金鑰:**  從 OpenAI、Anthropic 或 Google Gemini 等服務取得 API 金鑰。部分服務提供免費試用額度。
+* **建立新專案:** 使用 `npx create-mastra@latest` 命令快速建立新的 Mastra 應用程式。
+* **執行指令碼:** 使用 `mastra dev` 命令執行應用程式。
+## 📌 [FreeTubeApp/FreeTube](https://github.com/FreeTubeApp/FreeTube)
+<Callout>
+    Description: An Open Source YouTube app for privacy\
+    🌐 JavaScript｜⭐️ 16,646 | 2310 stars this week
+</Callout>
+    #### 簡介
+
+FreeTube 是一款以隱私為重的開源桌面 YouTube 播放器，讓使用者可在無廣告的情況下觀看 YouTube 影片，並防止 Google 使用 Cookie 和 JavaScript 追蹤使用者行為。它支援 Windows 10 及更新版本、macOS 11 及更新版本，以及 Linux 系統。目前仍處於 Beta 測試階段，可能存在一些錯誤和缺失的功能。
+
+
+#### 主要功能
+
+* 免廣告觀看影片
+* 防止 Google 使用 Cookie 和 JavaScript 追蹤
+* 提供兩種資料提取 API：內建 API 和 Invidious API
+* 無需帳號即可訂閱頻道
+* 支援連線外部代理伺服器，例如 Tor
+* 本地儲存和搜尋訂閱、瀏覽紀錄和已儲存影片
+* 可將訂閱整理成「個人檔案」以建立更精確的動態資訊
+* 匯入/匯出訂閱
+* YouTube 熱門影片
+* YouTube 章節
+* 基於設定的 Invidious 例項的熱門影片頁面
+* SponsorBlock 功能
+* 使用瀏覽器擴充程式直接將影片開啟至 FreeTube
+* 使用外部播放器觀看影片
+* 完全的主題支援
+* 影片截圖功能
+* 多視窗功能
+* 迷你播放器 (畫中畫)
+* 鍵盤快捷鍵
+* 只顯示適閤家庭觀看的內容選項
+* 使用無幹擾設定顯示/隱藏應用程式中的功能或元素
+
+
+#### 如何使用
+
+FreeTube 使用內建的資料提取器抓取和提供資料/影片，也可以選擇使用 Invidious API。它不使用任何官方 API 來獲取資料。雖然 YouTube 仍然可以看到你的影片請求，但它無法再使用 Cookie 或 JavaScript 追蹤你。你的訂閱和瀏覽紀錄儲存在你的電腦上，絕不會被傳送出去。強烈建議使用 VPN 或 Tor 來隱藏你的 IP 位址。  此外，FreeTube 提供瀏覽器擴充程式 (LibRedirect 和 RedirectTube) 可直接將 YouTube 連結開啟至 FreeTube。  LibRedirect 會自動重新導向 YouTube 連結，而 RedirectTube 則會在工具列和右鍵選單中新增按鈕，讓使用者手動開啟影片。  請注意，這些擴充程式不適用於 Linux 行動式版本。
+## 📌 [jingyaogong/minimind](https://github.com/jingyaogong/minimind)
+<Callout>
+    Description: 🚀🚀 「大模型」2小时完全从0训练26M的小参数GPT！🌏 Train a 26M-parameter GPT from scratch in just 2h!\
+    🌐 Python｜⭐️ 13,888 | 1971 stars this week
+</Callout>
+    #### 簡介
+
+MiniMind 是一個輕量級的開源大語言模型 (LLM)，旨在以極低的成本 (約 3 塊錢的 GPU 租用成本) 和時間 (約 2 小時，使用 NVIDIA 3090) 從零開始訓練。其最小版本僅 25.8M，約為 GPT-3 的 $\frac{1}{7000}$，即使是普通的個人 GPU 也能快速訓練。MiniMind 提供了包含 MoE (Mixture of Experts)、資料集清洗、預訓練 (Pretrain)、監督微調 (SFT)、LoRA 微調、DPO (Direct Preference Optimization) 演算法和模型蒸餾演算法等全過程的程式碼，並拓展了視覺多模態版本 MiniMind-V。所有核心演算法程式碼均使用 PyTorch 原生重構，不依賴第三方庫。
+
+
+#### 主要功能
+
+* 提供 MiniMind-LLM 架構的完整程式碼 (Dense + MoE 模型)。
+* 包含 Tokenizer 分詞器的詳細訓練程式碼。
+* 提供 Pretrain、SFT、LoRA、RLHF-DPO、模型蒸餾的全過程訓練程式碼。
+* 提供已清洗、去重的高質量資料集。
+* 從零實現預訓練、指令微調、LoRA、DPO 強化學習和白盒模型蒸餾。
+* 支援單機單卡、單機多卡 (DDP、DeepSpeed) 訓練，並支援 wandb 視覺化訓練流程及動態啟停訓練。
+* 在 C-Eval、C-MMLU、OpenBookQA 等第三方評測榜上進行模型測試。
+* 實現 OpenAI-API 協議的簡潔伺服器，方便整合到第三方 ChatUI (FastGPT、Open-WebUI 等)。
+* 基於 Streamlit 實現簡潔的聊天 WebUI 前端。
+* 提供 MiniMind-Reason 模型，復現 DeepSeek-R1 (蒸餾/RL)。
+
+
+#### 如何使用
+
+* **準備環境:**  使用 `pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple` 安裝必要的套件。確認 Torch 可使用 CUDA (`import torch; print(torch.cuda.is_available())`)。
+* **下載模型 (或資料):**  從 HuggingFace 或 ModelScope 下載預訓練模型，或從提供的連結下載資料集，並將其放置於 `./dataset/` 目錄下。推薦使用 `pretrain_hq.jsonl` 和 `sft_mini_512.jsonl` 快速訓練 Zero 模型。
+* **訓練:**  執行 `python train_pretrain.py` 進行預訓練，得到 `pretrain_*.pth` 權重檔案；接著執行 `python train_full_sft.py` 進行監督微調，得到 `full_sft_*.pth` 權重檔案。其他訓練步驟 (LoRA、蒸餾、強化學習等) 可參考檔案中的說明。  多卡訓練可以使用 `torchrun` 或 `deepspeed`。
+* **測試:** 使用 `python eval_model.py` 測試模型效果，`model_mode` 可選擇測試不同階段的模型。  `--lora_name` 可指定 LoRA 模型名稱。
+## 📌 [sinaptik-ai/pandas-ai](https://github.com/sinaptik-ai/pandas-ai)
+<Callout>
+    Description: Chat with your database or your datalake (SQL, CSV, parquet). PandasAI makes data analysis conversational using LLMs and RAG.\
+    🌐 Python｜⭐️ 16,982 | 1818 stars this week
+</Callout>
+    #### 簡介
+
+PandaAI是一個Python平臺，讓使用者能以自然語言提問資料資料。它協助非技術使用者以更自然的方式與資料互動，並幫助技術使用者在處理資料時節省時間和精力。PandaAI支援Jupyter Notebooks、Streamlit應用程式，以及客戶端/伺服器架構。  它可以與強大的資料平臺整合，只需幾行程式碼即可實現端到端的對話式資料分析。  PandaAI使用BambooLLM作為預設的LLM，使用者也可以使用其他的LLM。  此外，PandaAI提供Docker Sandbox，確保程式碼執行安全。
+
+
+#### 主要功能
+
+* 以自然語言提問資料資料，獲得即時分析結果。
+* 支援多種資料格式，例如CSV檔案。
+* 整合資料平臺，實現端到端的對話式資料分析。
+* 視覺化資料，生成圖表(例如直方圖)。
+* 支援單個或多個 Pandas DataFrame 的資料分析。
+* 使用 pip 或 poetry 安裝。
+* 提供Docker Sandbox以確保安全執行程式碼。
+* 支援Python 3.8+ <3.12版本。
+
+
+#### 如何使用
+
+* **安裝:** 使用 `pip install "pandasai>=3.0.0b2"` 或 `poetry add "pandasai>=3.0.0b2"` 安裝PandaAI library。  若使用Docker Sandbox，則需安裝 `pandasai-docker`。
+* **設定 API 金鑰:** 使用 `pai.api_key.set("your-pai-api-key")` 設定PandaAI API金鑰 (可於 [https://app.pandabi.ai](https://app.pandabi.ai) 註冊取得)。
+* **載入資料:** 使用 `pai.read_csv("./filepath.csv")` 載入CSV資料，並使用`pai.create()`函式將資料推送至平臺。
+* **提問:** 使用 `df.chat("你的問題")` 向PandaAI提問，例如 `df.chat('Which are the top 5 countries by sales?')`。
+* **產生圖表:** 使用 `df.chat()`  並輸入繪圖指令，例如 `df.chat("Plot the histogram of countries showing for each one the gd. Use different colors for each bar")`。
+* **使用多個 DataFrame:**  將多個 DataFrame 傳遞至 `pai.chat()` 函式，例如 `pai.chat("Who gets paid the most?", employees_df, salaries_df)`。
+* **Docker Sandbox 使用:** 初始化 `DockerSandbox` 並啟動它，然後按照一般使用方式提問。
